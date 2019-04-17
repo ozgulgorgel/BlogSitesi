@@ -1,0 +1,27 @@
+﻿@model BlogMvc.Models.Kategori
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Kategori</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KategoriAdı)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KategoriAdı)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.KategoriID }) |
+    @Html.ActionLink("Geri Dön", "Index")
+</p>
